@@ -1,0 +1,23 @@
+services:
+  koala:
+    build: .
+    image: koala-monitoring:latest
+    container_name: koala
+    ports:
+      - "3000:3000"
+    volumes:
+      - koala-data:/app/data
+    environment:
+      - DEFAULT_TIMEZONE=Asia/Kolkata
+      - PORT=3000
+      - NODE_ENV=production
+      - DOCKER=true
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=your_mail
+      - SMTP_PASS=_your_app_pass
+      - SMTP_FROM=Koala Monitor
+    restart: unless-stopped
+
+volumes:
+  koala-data:

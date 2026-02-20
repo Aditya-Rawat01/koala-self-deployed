@@ -1,0 +1,6 @@
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your mail
+SMTP_PASS=your app pass for that mail
+SMTP_FROM=Koala Monitor
+KOALA_TIMEZONE="Asia/Kolkata"
