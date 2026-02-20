@@ -90,12 +90,11 @@ export async function register(monitor: monitorType) {
       ) {
         const lastAlertAt = monitor.last_alert_at;
         const cooldown = monitor.alert_cooldown;
-
         const cooldownPassed = !lastAlertAt || now - lastAlertAt > cooldown;
-
+        const timeZone = process.env.KOALA_TIMEZONE
         console.log("Failures:", entry.consecutiveFailures);
         console.log("Threshold:", monitor.alert_threshold);
-        console.log("Last alert at:", monitor.last_alert_at);
+        console.log("Last alert at:", monitor.last_alert_at ? new Date(monitor.last_alert_at).toLocaleString("en-US", {timeZone: timeZone || undefined}): "None");
         const time = (now - (monitor.last_alert_at || 0))/1000
         console.log("Next alert (in sec):", Math.max((900000 - time), 0))
         console.log("Cooldown:", monitor.alert_cooldown);

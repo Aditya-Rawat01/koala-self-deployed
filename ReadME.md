@@ -136,7 +136,7 @@ vi docker-compose.yml
 
 - SMTP_PORT → Usually 587
 
-- SMTP_EMAIL → Sender email for alerts  *(required)*
+- SMTP_USER → Sender email for alerts  *(required)*
 
 - SMTP_PASS → App password (NOT your real email password)  *(required)*
 

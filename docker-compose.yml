@@ -7,7 +7,7 @@ services:
     volumes:
       - koala-data:/app/data
     environment:
-      - DEFAULT_TIMEZONE=Asia/Kolkata
+      - KOALA_TIMEZONE=Asia/Kolkata
       - PORT=3000
       - NODE_ENV=production
       - DOCKER=true
