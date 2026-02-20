@@ -114,7 +114,7 @@ koala-self-hosted/
 
 ### 1️⃣ Fetch the Docker Compose file
 ```bash
-curl -O https://raw.githubusercontent.com/YOUR-USERNAME/koala-self-hosted/main/docker-compose.yml
+curl -fsSL https://raw.githubusercontent.com/Aditya-Rawat01/koala-self-deployed/main/docker-compose.yml -o docker-compose.yml
 ```
 ### 2️⃣ Configure the Docker Compose file
 1. Open the compose file:
