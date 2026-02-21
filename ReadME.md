@@ -201,4 +201,6 @@ environment:
 ## ⚠️ Do NOT use your real Gmail password.
 - App Passwords are required when 2FA is enabled for SMTP authentication.
 
+## License
 
+MIT © 2026 Aditya Rawat
