@@ -8,6 +8,8 @@ services:
       - koala-data:/app/data
     environment:
       - KOALA_TIMEZONE=Asia/Kolkata
+      - ALERT_THRESHOLD=3
+      - ALERT_COUNTDOWN=900000
       - PORT=3000
       - NODE_ENV=production
       - DOCKER=true

@@ -45,11 +45,11 @@ router.post("/", (req, res) => {
     expected_status,
     interval,
     headers,
-    alert_threshold,
-    alert_cooldown,
     body,
   } = req.body;
   // and this as well
+  const alert_threshold = process.env.ALERT_THRESHOLD
+  const alert_cooldown = process.env.ALERT_COOLDOWN
   const threshold =
     typeof alert_threshold === "number" && alert_threshold >= 1
       ? alert_threshold
